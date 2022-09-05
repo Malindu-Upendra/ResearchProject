@@ -93,7 +93,7 @@ class AudioClip(BaseModel):
     name: str
     uid: str
     chapter: int
-    file: UploadFile
+    file: File
 
 @app.post("/testFlutterAPI")
 def flutterAPI(audioClip: AudioClip):
