@@ -97,6 +97,7 @@ class AudioClip(BaseModel):
 
 @app.post("/testFlutterAPI")
 def flutterAPI(audioClip: AudioClip):
+    print("api called")
     print(audioClip)
     return {'result': True}
 
