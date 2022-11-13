@@ -153,7 +153,7 @@ testing API call from flutter
 
 @app.get("/testApi")
 def testApi():
-    return {"hello world"}
+    return {"updated code"}
 
 # @app.get("/combineMp4")
 # def combinedmpfour():
