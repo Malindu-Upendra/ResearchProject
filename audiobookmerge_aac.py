@@ -8,7 +8,7 @@ from pydub import AudioSegment
 app = FastAPI()
 
 @app.get("/mergeFile")
-async def getName():
+def getName():
     aacAudios = "AAC_audios/"
     mergedFileDir = "Merged files/"
     generatedFile = "combined_file_aac.aac"
@@ -19,8 +19,8 @@ async def getName():
 
     for filename in filenames:
         # print(filename)
-        audiofilename = await AudioSegment.from_file(filename, "aac")
-        print(audiofilename)
+        audiofilename = AudioSegment.from_file(filename, "aac")
+        # print(audiofilename)
         # combined += audiofilename
 
     # combined.export(mergedFileDir + generatedFile, format="aac")
