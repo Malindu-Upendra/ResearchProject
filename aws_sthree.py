@@ -106,7 +106,7 @@ async def getName(bookId: str):
         # print(audiofilename)
         combined += audiofilename
 
-    combined.export(mergedFileDir + generatedFile, format="wav")
+    combined.export(os.path.join(os.getcwd(),mergedFileDir + generatedFile), format="wav")
 
     client_s3.upload_file(
                     os.path.join(os.getcwd(), 'Merged files/final.wav'),
@@ -117,7 +117,7 @@ async def getName(bookId: str):
     for filename in filenames:
         os.remove(filename)
 
-    final_merged_file = mergedFileDir + generatedFile
+    final_merged_file = os.path.join(os.getcwd(),mergedFileDir + generatedFile)
 
     os.remove(final_merged_file)
 
